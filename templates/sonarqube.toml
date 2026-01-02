@@ -1,0 +1,6 @@
+[[sources]]
+kind = "url"
+parser = "json"
+options = { system = "sonarqube", url = "https://FQDN_HERE/api/editions/show_license", method = "GET" }
+parser_options = { key = ".expiresAt", date_formats = ["%Y-%m-%d"] }
+auth = { type = "token", token = "TOKEN_HERE" }

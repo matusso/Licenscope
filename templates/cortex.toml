@@ -1,0 +1,8 @@
+
+[[sources]]
+kind = "url"
+parser = "json"
+options = { system = "cortex", url = "https://FQDN_HERE/public_api/v1/system/get_tenant_info", method = "POST", headers = { "x-xdr-auth-id" = "15" } }
+auth = { type = "token", scheme = "", token = "TOKEN_HERE" } 
+parser_options = { key = ".reply.pro_cloud_expiration", date_formats = ["%b %d %Y %H:%M:%S"] }
+

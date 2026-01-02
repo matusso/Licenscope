@@ -1,0 +1,28 @@
+[project]
+name = "licenscope"
+version = "0.2.1"
+description = "Python tool for monitoring license and entitlement expiration across multiple platforms, with a CLI for automation and monitoring."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "jinja2>=3.1.6",
+    "loguru>=0.7.2",
+    "markupsafe>=3.0.3",
+    "slack-sdk>=3.39.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.14.10",
+]
+
+[project.scripts]
+licenscope = "licenscope.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["licenscope*"]
+exclude = ["templates*"]

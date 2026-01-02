@@ -1,0 +1,5 @@
+[[sources]]
+kind = "url"
+parser = "json"
+options = { system = "gitlab", url = "https://FQDN_HERE/api/v4/license", method = "GET", headers = { "PRIVATE-TOKEN" = "TOKEN_HERE" } }
+parser_options = { key = ".expires_at", date_formats = ["%Y-%m-%d"] }

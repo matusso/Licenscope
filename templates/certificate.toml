@@ -1,0 +1,11 @@
+default_timezone = "UTC"
+
+[[sources]]
+kind = "certificate"
+parser = "json"
+options = { host = "example.com", port = 443 }
+parser_options = { key = "." }
+
+[[notifications]]
+kind = "slack"
+options = { webhook_url = "https://hooks.slack.com/..." }

@@ -1,0 +1,6 @@
+[[sources]]
+kind = "url"
+parser = "json"
+options = { system = "nexus", url = "https://FQDN_HERE/nexus/service/rest/v1/system/license", method = "GET" } 
+auth = { type = "token", scheme = "basic", token = "TOKEN_HERE" } 
+parser_options = { key = ".expirationDate", date_formats = ["%Y-%m-%dT%H:%M:%S.%f%z"] }
